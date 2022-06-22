@@ -4,35 +4,55 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <link rel="stylesheet" href="style.css">
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+</style>
   <title>form</title>
 </head>
 <body>
-  <div class="container">
+  
+  
+
+
+
+<div id="op">
+    
   <div class="left">
+    
     <div class="aside2">
 <p>Try it free 7 days then $20/mo thereafter</p>
 </div>
  <div class="aside3">
-       <form action="index.html" method="" target="" size="10">
+      <form action="index.html" method="" target="" size="10"> 
          <div class="container" data-error="Name can't be blank !">
-         <input type="text" class="input" value="abc" placeholder="First Name" required pattern="^abc$">
+         <input type="text" class="input" value="" placeholder="First Name" required>
          </div>
-        <input type="text" id="username" required placeholder="Enter NamName">
-         <input type="email" placeholder="Email Address" required="this field" id="email" name="">
+         <div class="container" data-error="Name can't be blank !">
+        <input type="text" id="username" required pattern="a" placeholder="Enter Name">
+        </div>
+        <div class="container" data-error="invalid email!">
+         <input type="email" placeholder="Email Address" required="" id="email" name="">
+         </div>
+         <div class="container" data-error="Name can't be blank !">
          <input type="password" placeholder="password" required="this field" id="password" name="">
+         </div>
          <button type="submit">CLAIM YOUR FREE TRIAL</button>
-         <p>By clicking the button,you agree to our terms and services</p>
-         </form>
+         <p>By clicking the button,you agree to our <span>terms and services</span></p>
+         </form> 
 </div> 
 </div>
+
 <div class="aside1">
   <div class="main">
     <h1>Learn to code by watching others
  </h1> 
- <small>See how experienced developers solve problem in real-time. watching scripted tutorial is great But understanding how developers think is invaluable</small>
+ <p>See how experienced developers solve problem in real-time. watching scripted tutorial is great But understanding how developers think is invaluable</p>
 </div>
 </div>
 </div>
 
+<script>
+  document.querySelectorAll('.container[data-error] .input').forEach(inpEl => {inEl.addEventListener('input', () => inpEl.parentElement.removeAttribute('data-error'));});
+</script>
 </body>
 </html>
